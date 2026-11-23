@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Teglar (O'zingizga moslab o'zgartiring) -->
+    <meta name="description" content="Shaxsiy Portfolio - Frontend Developer & UI/UX Designer">
+    <meta name="keywords" content="Portfolio, Web Developer, Frontend, UI/UX Designer, HTML, CSS, JavaScript">
+    <meta name="author" content="Zaxro">
+    <title>Portfolio | Frontend Developer & UI/UX Designer</title>
+
+    <!-- Favicon uchun joy (images papkasiga favicon.png qo'ying) -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Owl Carousel 2 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Custom Cursor (Faqat Desktop uchun) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader Animatsiyasi -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-ring"></div>
+            <span class="loader-text">LOADING</span>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container (Xabarlar uchun) -->
+    <div id="notification-container"></div>
+
+    <!-- ==================== 1. NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNavbar">
+        <div class="container">
+            <!-- [TAHRIRLASH UCHUN]: Logotip yoki Ismingiz -->
+            <a class="navbar-brand logo-text" href="#home">
+                <span class="logo-accent">&lt;</span>Zaxro<span class="logo-accent">/&gt;</span>
+            </a>
+
+            <!-- Mobil Hamburger Tugmasi -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menyuni ochish">
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+                <span class="toggler-line"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <!-- Dekorativ fon effektlari -->
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+        <div class="hero-grid-bg"></div>
+
+        <div class="container position-relative z-2">
+            <div class="row align-items-center gy-5">
+                <!-- Chap ustun: Matnlar va Tugmalar -->
+                <div class="col-lg-7" data-aos="fade-up" data-aos-duration="900">
+                    <div class="badge-pill mb-3">
+                        <span class="status-dot"></span>
+                        <!-- [TAHRIRLASH UCHUN] -->
+                        <span>Yangi loyihalar uchun ochiqman</span>
+                    </div>
+
+                    <h1 class="hero-title mb-3">
+                        Salom, men <br>
+                        <!-- [TAHRIRLASH UCHUN]: To'liq ismingiz -->
+                        <span class="gradient-text">Ziyoyiddinova Zaxro </span>
+                    </h1>
+
+                    <h2 class="hero-subtitle mb-4">
+                        Men <span id="typing-text" class="typing-highlight"></span><span class="typing-cursor">|</span>
+                    </h2>
+
+                    <!-- [TAHRIRLASH UCHUN]: Qisqacha tanishtiruv matni -->
+                    <p class="hero-desc mb-4">
+                        [Bu yerga o‘zingiz haqingizda 2–3 qatorli qisqacha va ta’sirli tanishtiruv matnini yozing. Masalan: Zamonaviy, tezkor va foydalanuvchilar uchun qulay veb-interfeyslar yaratishga ixtisoslashgan dasturchiman.]
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary-custom">
+                            <span>View My Work</span>
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline-custom">
+                            <span>Contact Me</span>
+                            <i class="fa-regular fa-paper-plane ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- O'ng ustun: Shaxsiy rasm uchun placeholder -->
+                <div class="col-lg-5" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="150">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-frame glass-card">
+                            <!-- 
+                                [RASM JOYLASHTIRISH UCHUN]:
+                                Rasmingizni images/hero-photo.jpg nom bilan saqlang va pastdagi <img> tegini izohdan chiqaring,
+                                placeholder divni esa o'chirib tashlang.
+                            -->
+                            <!-- <img src="images/hero-photo.jpg" alt="Shaxsiy rasm" class="img-fluid hero-img"> -->
+                            
+                            <div class="image-placeholder hero-placeholder">
+                                <i class="fa-regular fa-user placeholder-icon"></i>
+                                <span class="placeholder-title">Shaxsiy Rasm Uchun Joy</span>
+                                <small class="placeholder-hint">images/hero-photo.jpg (Tavsiya: 500x600px)</small>
+                            </div>
+                        </div>
+                        <!-- Suzuvchi dekorativ elementlar -->
+                        <div class="floating-badge badge-top glass-card">
+                            <i class="fa-solid fa-code text-accent"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="floating-badge badge-bottom glass-card">
+                            <i class="fa-solid fa-wand-magic-sparkles text-accent"></i>
+                            <span>Modern UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. ABOUT ME ==================== -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">ABOUT ME</span>
+                <h2 class="section-title">Men <span class="gradient-text">Haqimda</span></h2>
+                <p class="section-subtitle">Shaxsiy ma’lumotlarim, ta’limim va kelajakdagi maqsadlarim</p>
+            </div>
+
+            <div class="row align-items-center gy-5">
+                <!-- Chap tomon: Ikkinchi rasm uchun joy -->
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="about-image-box glass-card p-3">
+                        <!-- 
+                            [RASM JOYLASHTIRISH UCHUN]:
+                            Rasmingizni images/about-photo.jpg nom bilan saqlang va <img> tegini faollashtiring.
+                        -->
+                        <!-- <img src="images/about-photo.jpg" alt="Men haqimda rasm" class="img-fluid rounded-4"> -->
+
+                        <div class="image-placeholder about-placeholder">
+                            <i class="fa-regular fa-image placeholder-icon"></i>
+                            <span class="placeholder-title">About Me Rasmi Uchun Joy</span>
+                            <small class="placeholder-hint">images/about-photo.jpg (4:5 nisbatda)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- O'ng tomon: Ma'lumotlar -->
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="about-content glass-card p-4 p-md-5">
+                        <h3 class="mb-3">Salom! Men kimman?</h3>
+                        
+                        <!-- [TAHRIRLASH UCHUN]: Dasturlashga kirib kelish tarixi -->
+                        <p class="text-muted-custom mb-3">
+                            <strong class="text-white">Dasturlashga kirib kelishim:</strong> [Bu yerga dasturlash va dizayn sohasiga qanday qiziqib qolganingiz, ilk qadamlaringiz haqida yozing.]
+                        </p>
+
+                        <!-- [TAHRIRLASH UCHUN]: Maqsadlar va kelajak rejalari -->
+                        <p class="text-muted-custom mb-4">
+                            <strong class="text-white">Maqsadlarim va rejalarim:</strong> [Bu yerga kelajakda qanday loyihalar ustida ishlashni xohlashingiz va kasbiy maqsadlaringizni kiriting.]
+                        </p>
+
+                        <!-- Shaxsiy ma'lumotlar jadvali -->
+                        <div class="row g-3 mb-4 info-grid">
+                            <div class="col-sm-6">
+                                <div class="info-item">
+                                    <span class="info-label">Ism va familiya:</span>
+                                    <!-- [TAHRIRLASH UCHUN] -->
+                                    <span class="info-value">[Ism Familiya]</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="info-item">
+                                    <span class="info-label">Yoshim:</span>
+                                    <!-- [TAHRIRLASH UCHUN] -->
+                                    <span class="info-value">[Yoshingiz, masalan: 20 yosh]</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="info-item">
+                                    <span class="info-label">Yashash joyim:</span>
+                                    <!-- [TAHRIRLASH UCHUN] -->
+                                    <span class="info-value">[Shahar / Viloyat, O‘zbekiston]</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="info-item">
+                                    <span class="info-label">Ta’limim:</span>
+                                    <!-- [TAHRIRLASH UCHUN] -->
+                                    <span class="info-value">[O‘quv yurti / Kurs nomi]</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="info-item">
+                                    <span class="info-label">Qiziqishlarim:</span>
+                                    <!-- [TAHRIRLASH UCHUN] -->
+                                    <span class="info-value">[Web Design, UI/UX, Texnologiyalar, Kitob o‘qish va h.k.]</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contact" class="btn btn-primary-custom">Bog‘lanish</a>
+                            <!-- Agar CV faylingizni assets/cv.pdf ga qo'ysangiz ishlaydi -->
+                            <a href="assets/cv.pdf" download class="btn btn-outline-custom">
+                                <i class="fa-solid fa-download me-2"></i>CV Yuklab olish
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. SKILLS ==================== -->
+    <section id="skills" class="section-padding bg-darker">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">MY SKILLS</span>
+                <h2 class="section-title">Texnik <span class="gradient-text">Ko‘nikmalarim</span></h2>
+                <p class="section-subtitle">Loyihalarni yaratishda foydalanadigan asosiy texnologiya va vositalarim</p>
+            </div>
+
+            <!-- [TAHRIRLASH UCHUN]: Har bir skill foizini "data-percent" va matn ichidan o'zgartirishingiz mumkin -->
+            <div class="row g-4">
+                <!-- Skill 1: HTML -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+                    <div class="skill-card glass-card">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                                <h4 class="skill-name mb-0">HTML5</h4>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="progress custom-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill 2: CSS -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-card glass-card">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                                <h4 class="skill-name mb-0">CSS3</h4>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress custom-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill 3: JavaScript -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="skill-card glass-card">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                                <h4 class="skill-name mb-0">JavaScript</h4>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="progress custom-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill 4: jQuery -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card glass-card">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                                <h4 class="skill-name mb-0">jQuery</h4>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress custom-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill 5: Bootstrap -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="skill-card glass-card">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="skill-icon"><i class="fa-brands fa-bootstrap"></i></div>
+                                <h4 class="skill-name mb-0">Bootstrap 5</h4>
+                            </div>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="progress custom-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill 6: Responsive Design -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card glass-card">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="skill-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                                <h4 class="skill-name mb-0">Responsive Design</h4>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="progress custom-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill 7: UI/UX Design -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+                    <div class="skill-card glass-card">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="skill-icon"><i class="fa-brands fa-figma"></i></div>
+                                <h4 class="skill-name mb-0">UI/UX Design</h4>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress custom-progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. SERVICES ==================== -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">SERVICES</span>
+                <h2 class="section-title">Taklif Qiladigan <span class="gradient-text">Xizmatlarim</span></h2>
+                <p class="section-subtitle">Biznesingiz va g‘oyalaringiz uchun sifatli raqamli yechimlar</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+                    <div class="service-card glass-card h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-desc">
+                            Zamonaviy standartlarga javob beradigan, tezkor va barqaror veb-saytlarni noldan ishlab chiqish.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card glass-card h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Frontend Development</h3>
+                        <p class="service-desc">
+                            Dizayn maketlarini jonli, interaktiv va animatsiyalarga boy veb-interfeyslarga aylantirish.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-card glass-card h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-tablet-screen-button"></i>
+                        </div>
+                        <h3 class="service-title">Responsive Website</h3>
+                        <p class="service-desc">
+                            Barcha qurilmalarda — kompyuter, planshet va smartfonlarda mukammal ko‘rinadigan moslashuvchan dizayn.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card glass-card h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h3 class="service-title">Landing Page Design</h3>
+                        <p class="service-desc">
+                            Mahsulot yoki xizmatlaringiz sotuvini oshirishga qaratilgan kreativ bir sahifali veb-saytlar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="service-card glass-card h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="service-title">Website Redesign</h3>
+                        <p class="service-desc">
+                            Eskirgan veb-saytlarni zamonaviy UI/UX tendensiyalari asosida yangilash va tezlashtirish.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card glass-card h-100">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-desc">
+                            Foydalanuvchi tajribasini o‘rgangan holda qulay, estetik va esda qolarli interfeys dizaynlarini yaratish.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. PORTFOLIO / MY PROJECTS ==================== -->
+    <section id="portfolio" class="section-padding bg-darker">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">PORTFOLIO</span>
+                <h2 class="section-title">Mening <span class="gradient-text">Loyihalarim</span></h2>
+                <p class="section-subtitle">Yaratgan eng sara veb-saytlarim va amaliy ishlarim</p>
+            </div>
+
+            <!-- 1-QISM: GRID KO'RINISHIDAGI LOYIHALAR -->
+            <div class="row g-4 mb-5">
+                
+                <!-- LOYIHA 1 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+                    <div class="project-card glass-card h-100">
+                        <div class="project-thumb">
+                            <!-- [RASM QO'YISH]: <img src="images/project-1.jpg" alt="Loyiha 1"> -->
+                            <div class="image-placeholder project-placeholder">
+                                <i class="fa-solid fa-globe placeholder-icon"></i>
+                                <span>Loyiha 1 Rasmi (images/project-1.jpg)</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <!-- [TAHRIRLASH UCHUN]: Loyiha nomi va tavsifi -->
+                            <h3 class="project-title">Personal Portfolio Web</h3>
+                            <p class="project-desc">
+                                [Loyiha haqida qisqacha ma’lumot: Zamonaviy shaxsiy portfolio veb-sayti. Responsive dizayn va silliq animatsiyalar bilan yaratilgan.]
+                            </p>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            <div class="d-flex gap-3 mt-auto">
+                                <a href="https://potfolio-zahro.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom btn-sm flex-grow-1">
+                                    <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Demo
+                                </a>
+                                <a href="https://potfolio-zahro.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm flex-grow-1">
+                                    <i class="fa-regular fa-eye me-1"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOYIHA 2 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card glass-card h-100">
+                        <div class="project-thumb">
+                            <!-- [RASM QO'YISH]: <img src="images/project-2.jpg" alt="Loyiha 2"> -->
+                            <div class="image-placeholder project-placeholder">
+                                <i class="fa-solid fa-layer-group placeholder-icon"></i>
+                                <span>Loyiha 2 Rasmi (images/project-2.jpg)</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <!-- [TAHRIRLASH UCHUN]: Loyiha nomi va tavsifi -->
+                            <h3 class="project-title">Creative Web Project</h3>
+                            <p class="project-desc">
+                                [Loyiha haqida qisqacha ma’lumot: Kreativ interfeys va zamonaviy veb-texnologiyalar asosida ishlab chiqilgan loyiha.]
+                            </p>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                            <div class="d-flex gap-3 mt-auto">
+                                <a href="https://dreamy-lily-3e3fdc.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom btn-sm flex-grow-1">
+                                    <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Demo
+                                </a>
+                                <a href="https://dreamy-lily-3e3fdc.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm flex-grow-1">
+                                    <i class="fa-regular fa-eye me-1"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOYIHA 3 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="project-card glass-card h-100">
+                        <div class="project-thumb">
+                            <!-- [RASM QO'YISH]: <img src="images/project-3.jpg" alt="Loyiha 3"> -->
+                            <div class="image-placeholder project-placeholder">
+                                <i class="fa-solid fa-laptop-code placeholder-icon"></i>
+                                <span>Loyiha 3 Rasmi (images/project-3.jpg)</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <!-- [TAHRIRLASH UCHUN]: Loyiha nomi va tavsifi -->
+                            <h3 class="project-title">Abdulboriy Web Platform</h3>
+                            <p class="project-desc">
+                                [Loyiha haqida qisqacha ma’lumot: Foydalanuvchilar uchun qulay navigatsiya va chiroyli dizaynga ega veb-sahifa.]
+                            </p>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="d-flex gap-3 mt-auto">
+                                <a href="https://abdulboriy-web.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom btn-sm flex-grow-1">
+                                    <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Demo
+                                </a>
+                                <a href="https://abdulboriy-web.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm flex-grow-1">
+                                    <i class="fa-regular fa-eye me-1"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOYIHA 4 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card glass-card h-100">
+                        <div class="project-thumb">
+                            <!-- [RASM QO'YISH]: <img src="images/project-4.jpg" alt="Loyiha 4"> -->
+                            <div class="image-placeholder project-placeholder">
+                                <i class="fa-solid fa-wand-sparkles placeholder-icon"></i>
+                                <span>Loyiha 4 Rasmi (images/project-4.jpg)</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <!-- [TAHRIRLASH UCHUN]: Loyiha nomi va tavsifi -->
+                            <h3 class="project-title">Modern Landing Experience</h3>
+                            <p class="project-desc">
+                                [Loyiha haqida qisqacha ma’lumot: Yuqori tezlik va estetika uyg‘unligida yaratilgan zamonaviy veb-loyiha.]
+                            </p>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">Bootstrap 5</span>
+                            </div>
+                            <div class="d-flex gap-3 mt-auto">
+                                <a href="https://frabjous-treacle-218c26.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom btn-sm flex-grow-1">
+                                    <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Live Demo
+                                </a>
+                                <a href="https://frabjous-treacle-218c26.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm flex-grow-1">
+                                    <i class="fa-regular fa-eye me-1"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 2-QISM: OWL CAROUSEL SLIDER -->
+            <div class="mt-5 pt-3" data-aos="fade-up">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3 class="h4 mb-0">Loyihalar Galereyasi <span class="text-accent">(Carousel)</span></h3>
+                    <div class="carousel-nav-btns d-flex gap-2">
+                        <button class="btn btn-outline-custom btn-sm owl-prev-custom" aria-label="Oldingi"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="btn btn-outline-custom btn-sm owl-next-custom" aria-label="Keyingi"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="owl-carousel owl-theme portfolio-carousel">
+                    <!-- Slide 1 -->
+                    <div class="item">
+                        <div class="carousel-card glass-card p-4">
+                            <span class="badge bg-primary-subtle text-primary mb-2">01 / Portfolio</span>
+                            <h5>Personal Portfolio Web</h5>
+                            <p class="small text-muted-custom">Zamonaviy shaxsiy brend veb-sayti.</p>
+                            <a href="https://potfolio-zahro.netlify.app/" target="_blank" rel="noopener noreferrer" class="carousel-link">
+                                Saytni ochish <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="item">
+                        <div class="carousel-card glass-card p-4">
+                            <span class="badge bg-primary-subtle text-primary mb-2">02 / Creative</span>
+                            <h5>Dreamy Lily Web</h5>
+                            <p class="small text-muted-custom">Kreativ dizayn va animatsiyali loyiha.</p>
+                            <a href="https://dreamy-lily-3e3fdc.netlify.app/" target="_blank" rel="noopener noreferrer" class="carousel-link">
+                                Saytni ochish <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="item">
+                        <div class="carousel-card glass-card p-4">
+                            <span class="badge bg-primary-subtle text-primary mb-2">03 / Web App</span>
+                            <h5>Abdulboriy Web</h5>
+                            <p class="small text-muted-custom">To‘liq moslashuvchan zamonaviy veb-sayt.</p>
+                            <a href="https://abdulboriy-web.netlify.app/" target="_blank" rel="noopener noreferrer" class="carousel-link">
+                                Saytni ochish <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="item">
+                        <div class="carousel-card glass-card p-4">
+                            <span class="badge bg-primary-subtle text-primary mb-2">04 / Landing</span>
+                            <h5>Modern Landing Page</h5>
+                            <p class="small text-muted-custom">Minimalist va tezkor veb-interfeys.</p>
+                            <a href="https://frabjous-treacle-218c26.netlify.app/" target="_blank" rel="noopener noreferrer" class="carousel-link">
+                                Saytni ochish <i class="fa-solid fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================== 7. MY JOURNEY / EXPERIENCE ==================== -->
+    <section id="journey" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">MY JOURNEY</span>
+                <h2 class="section-title">Ta’lim va <span class="gradient-text">Tajriba Yo‘lim</span></h2>
+                <p class="section-subtitle">O‘rganish bosqichlarim va kasbiy rivojlanish xronologiyasi</p>
+            </div>
+
+            <!-- [TAHRIRLASH UCHUN]: Timeline elementlarini o'zingizga moslab to'ldiring -->
+            <div class="timeline-wrapper">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">[2025 – Hozirgacha]</span>
+                        <h4 class="timeline-title">[Frontend Development & Amaliy Loyihalar]</h4>
+                        <span class="timeline-place">[Mustaqil rivojlanish / Freelance]</span>
+                        <p class="timeline-text mb-0">
+                            [Bu bosqichda real veb-loyihalar yaratish, UI/UX tamoyillarini chuqur o‘rganish va murakkab interfeyslarni kodlash bilan shug‘ullanmoqdaman.]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">[2024 – 2025]</span>
+                        <h4 class="timeline-title">[Web Dasturlash Kurslari]</h4>
+                        <span class="timeline-place">[O‘quv markazi yoki Akademiya nomi]</span>
+                        <p class="timeline-text mb-0">
+                            [HTML5, CSS3, Bootstrap 5, JavaScript va jQuery texnologiyalarini mukammal o‘zlashtirdim hamda birinchi portfolio loyihalarimni ishga tushirdim.]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">[2023 – 2024]</span>
+                        <h4 class="timeline-title">[IT va Dizaynga Ilk Qadam]</h4>
+                        <span class="timeline-place">[Maktab / Litsey / Mustaqil o‘rganish]</span>
+                        <p class="timeline-text mb-0">
+                            [Veb-texnologiyalar asoslari, kompyuter savodxonligi va dizayn dasturlari bilan tanishish jarayoni.]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 8. CONTACT ME ==================== -->
+    <section id="contact" class="section-padding bg-darker">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-tag">CONTACT ME</span>
+                <h2 class="section-title">Men Bilan <span class="gradient-text">Bog‘laning</span></h2>
+                <p class="section-subtitle">Loyiha takliflari yoki savollaringiz bo‘lsa, istalgan vaqtda yozishingiz mumkin</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+                <!-- Chap ustun: Aloqa ma'lumotlari -->
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="contact-info-box glass-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h3 class="mb-3">Aloqa Ma’lumotlari</h3>
+                            <p class="text-muted-custom mb-4">
+                                Quyidagi ijtimoiy tarmoqlar yoki to‘g‘ridan-to‘g‘ri aloqa vositalari orqali men bilan bog‘lanishingiz mumkin:
+                            </p>
+
+                            <div class="d-flex flex-column gap-3">
+                                <!-- Email -->
+                                <a href="mailto:zaxro@gmail.com" class="contact-link-card">
+                                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                    <div>
+                                        <span class="d-block small text-muted-custom">Email</span>
+                                        <strong class="text-white">zaxro@gmail.com</strong>
+                                    </div>
+                                </a>
+
+                                <!-- Telefon -->
+                                <a href="tel:+998300013787" class="contact-link-card">
+                                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                    <div>
+                                        <span class="d-block small text-muted-custom">Telefon</span>
+                                        <strong class="text-white">+998 30 001 37 87</strong>
+                                    </div>
+                                </a>
+
+                                <!-- Telegram -->
+                                <a href="https://t.me/kim_jiwoo" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+                                    <div class="contact-icon"><i class="fa-brands fa-telegram"></i></div>
+                                    <div>
+                                        <span class="d-block small text-muted-custom">Telegram</span>
+                                        <strong class="text-white">@kim_jiwoo</strong>
+                                    </div>
+                                </a>
+
+                                <!-- Instagram -->
+                                <a href="https://instagram.com/kim_.jiwoo" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+                                    <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                                    <div>
+                                        <span class="d-block small text-muted-custom">Instagram</span>
+                                        <strong class="text-white">@kim_.jiwoo</strong>
+                                    </div>
+                                </a>
+
+                                <!-- GitHub -->
+                                <a href="https://github.com/zaxro7986-code" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+                                    <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                                    <div>
+                                        <span class="d-block small text-muted-custom">GitHub</span>
+                                        <strong class="text-white">github.com/zaxro7986-code</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- O'ng ustun: Contact Form -->
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form-box glass-card p-4 p-md-5 h-100">
+                        <h3 class="mb-4">Xabar Yuborish</h3>
+                        
+                        <!-- 
+                            [BACKEND / FORMSPREE ULASH UCHUN]:
+                            Haqiqiy xabar qabul qilish uchun formspree.io saytidan ro'yxatdan o'tib,
+                            o'zingizga berilgan endpoint URL manzilini pastdagi `data-endpoint` atributiga yozing!
+                            Masalan: data-endpoint="https://formspree.io/f/sizning_kodingiz"
+                        -->
+                        <form id="contactForm" data-endpoint="" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="senderName" class="form-label">Ismingiz *</label>
+                                    <input type="text" class="form-control custom-input" id="senderName" name="name" placeholder="Ismingizni kiriting" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="senderEmail" class="form-label">Email manzilingiz *</label>
+                                    <input type="email" class="form-control custom-input" id="senderEmail" name="email" placeholder="example@gmail.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="senderSubject" class="form-label">Mavzu *</label>
+                                    <input type="text" class="form-control custom-input" id="senderSubject" name="subject" placeholder="Xabar mavzusi" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="senderMessage" class="form-label">Xabar matni *</label>
+                                    <textarea class="form-control custom-input" id="senderMessage" name="message" rows="5" placeholder="Loyihangiz yoki savolingiz haqida batafsil yozing..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-custom w-100 py-3" id="submitBtn">
+                                        <span>Send Message</span>
+                                        <i class="fa-solid fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 9. FOOTER ==================== -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row gy-4 align-items-center pb-4 border-bottom border-secondary-subtle">
+                <div class="col-md-4 text-center text-md-start">
+                    <a class="logo-text" href="#home">
+                        <span class="logo-accent">&lt;</span>Zaxro<span class="logo-accent">/&gt;</span>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <ul class="list-inline mb-0 footer-nav">
+                        <li class="list-inline-item"><a href="#home">Home</a></li>
+                        <li class="list-inline-item"><a href="#about">About</a></li>
+                        <li class="list-inline-item"><a href="#skills">Skills</a></li>
+                        <li class="list-inline-item"><a href="#portfolio">Portfolio</a></li>
+                        <li class="list-inline-item"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="social-icons d-inline-flex gap-2">
+                        <a href="https://github.com/zaxro7986-code" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://instagram.com/kim_.jiwoo" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://t.me/kim_jiwoo" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="mailto:zaxro@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-4 align-items-center text-center text-md-start">
+                <div class="col-md-6">
+                    <p class="mb-0 small text-muted-custom">&copy; 2026 Zaxro. Barcha huquqlar himoyalangan.</p>
+                </div>
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <p class="mb-0 small text-muted-custom">Designed &amp; Developed with <i class="fa-solid fa-heart text-danger"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back To Top Tugmasi -->
+    <button id="backToTop" aria-label="Yuqoriga qaytish">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel 2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
